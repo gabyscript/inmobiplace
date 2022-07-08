@@ -1,0 +1,224 @@
+/* General*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+    "nav main main"
+    "nav main main"
+    "nav main main";
+    grid-template-columns: 20% 40% 40%;
+    grid-template-rows: 20% 40% 40%;
+    height: 100vh;
+}
+
+/* Navegación*/
+
+.nav-section {
+    grid-area: nav;
+    background: #f8f8f8;    
+    border-right: 1px solid rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 5vh;
+   
+}
+
+.nav-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5vh;
+}
+
+.logo-div {
+   text-align: center;
+}
+
+.moving-div {    
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    gap: 1vh;
+}
+
+.moving-div span {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    top: 5vh;
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.moving-div span[data-show] {
+    transform: translateY(-100%);
+    transition: .5s transform ease-in-out;
+
+}
+
+.moving-div span:nth-child(1) {
+    background-image: linear-gradient(45deg, #0ecffe 50%, #07a6f1);
+}
+.moving-div span:nth-child(2) {
+    background-image: linear-gradient(45deg, #0ecffe 50%, #07a6f1);
+}
+.moving-div span:nth-child(3) {
+    background-image: linear-gradient(45deg, #0ecffe 50%, #07a6f1);
+}
+.moving-div span:nth-child(4) {
+    background-image: linear-gradient(45deg, #0ecffe 50%, #07a6f1);
+}
+
+.first-input-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+}
+
+.div-input-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vh;    
+}
+
+.second-input-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+}
+
+.number-input {
+    width: 10vh;
+    height: 4vh;
+    border: none;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#buscar-button {
+    width: 5vw;
+    height: 4vh;
+    background-color: aliceblue;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#buscar-button:hover {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55), 4px 4px 10px rgba(0, 0, 0, 0.40);
+}
+
+.input-info-div {
+    text-align: center;
+}
+
+.order-div {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+}
+
+.order-button {
+    width: 12vw;
+    height: 7vh;
+    background-color: aliceblue;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.order-button:hover {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55), 4px 4px 10px rgba(0, 0, 0, 0.40);
+}
+
+/* Seccion de tarjetas*/
+
+.product-section {
+    grid-area: main;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2vw;    
+}
+
+.tarjeta-producto {
+    width: 20vw;
+    height: 44vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;  
+    align-items: center;     
+    background-color: aliceblue;    
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 2%;    
+    box-sizing: border-box;
+    
+}
+
+.tarjeta-producto:hover {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55), 4px 4px 10px rgba(0, 0, 0, 0.40);
+}
+
+.img-div {  
+    width: 20vw;
+    height: 28vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    border-radius: 2%;
+}
+
+.text-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin-bottom: 10px;
+    gap: 0.5vh;    
+}
+
+.product-description {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 18vw;
+    font-weight: bold;
+}
+
+.product-room {
+    display: block;
+    font-weight: 400;
+}
+
+.product-mt {
+    display: block;
+    font-weight: 400;
+}

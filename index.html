@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Inmobiplace</title>
+</head>
+<body>
+    <nav class="nav-section">
+        <div class="nav-div">
+            <div class="logo-div">
+                <h1 class="logo-title">Inmobiplace</h1>
+                <h3 class="logo-subtitle">El lugar para</h3>
+                <div class="moving-div">
+                    <span data-show><h3 class="moving-subtitle">Tu hogar</h3></span>
+                    <span><h3 class="moving-subtitle">Tu oportunidad</h3></span>
+                    <span><h3 class="moving-subtitle">Tu estabilidad</h3></span>
+                    <span><h3 class="moving-subtitle">Tu futuro</h3></span>
+                </div>
+            </div>
+            <div class="first-input-div">
+                <h4 class="input-info-div">
+                    Cantidad de mínima de cuartos:
+                </h4>
+                <input type="number" name="" id="room-input" class="number-input">
+            </div>
+            <div class="second-input-div">
+                <div class="div-input-div">
+                    <h4 class="input-info div">Desde:</h4>
+                    <input type="number" name="" id="mts-a-input" class="number-input">
+                </div>
+                <div class="div-input-div">
+                    <h4 class="input-info div">hasta:</h4>
+                    <input type="number" name="" id="mts-b-input" class="number-input">
+                </div>                
+            </div>
+            <button id="buscar-button">Buscar</button>
+            <div class="order-div">
+                <button class="order-button" id="orden-cuartos">Ordenar por cuartos</button>
+                <button class="order-button" id="orden-mts">Ordenar por mts cuadrados</button>
+            </div>
+        </div>
+
+    </nav>
+    <main class="product-section" id="product-section">
+        
+    </main>
+
+    <script src="assets/script/objetos-globales.js"></script>
+    <script src="assets/script/subtitle.js"></script>
+    <script src="assets/script/crear-tarjetas.js"></script>
+    <script src="assets/script/buscar-ordenar.js"></script>
+</body>
+</html>
